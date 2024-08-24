@@ -73,10 +73,6 @@ outputs:
 runs:
   using: composite
   steps:
-    - name: Make setup script executable
-      run: chmod +x "$GITHUB_ACTION_PATH/setup.sh"
-      shell: bash
-
     - name: Set action inputs
       id: flutter-action
       shell: bash
