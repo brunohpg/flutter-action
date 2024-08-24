@@ -106,10 +106,9 @@ runs:
           ${{ steps.flutter-action.outputs.PUB-CACHE-KEY }}
 
     - name: Run setup script
-      shell: bash
       if: ${{ inputs.dry-run != 'true' && inputs.dry-run != true }}
       run: |
-        $GITHUB_ACTION_PATH/setup.sh \
+        setup.sh \
           -n '${{ steps.flutter-action.outputs.VERSION }}' \
           -a '${{ steps.flutter-action.outputs.ARCHITECTURE }}' \
           -c '${{ steps.flutter-action.outputs.CACHE-PATH }}' \
