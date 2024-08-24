@@ -75,7 +75,6 @@ runs:
   steps:
     - name: Set action inputs
       id: flutter-action
-      shell: bash
       run: |
         setup.sh -p \
           -n '${{ inputs.flutter-version }}' \
